@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvDetalleTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título del Voluntariado"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/tvDetalleDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción completa del voluntariado..."
+            android:paddingBottom="8dp" />
+
+        <!-- Fecha -->
+        <TextView
+            android:id="@+id/tvDetalleFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Fecha: 01/10/2025"
+            android:paddingBottom="4dp" />
+
+        <!-- Lugar -->
+        <TextView
+            android:id="@+id/tvDetalleLugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Lugar: Lima, Perú"
+            android:paddingBottom="8dp" />
+
+        <!-- Mapa -->
+        <FrameLayout
+            android:id="@+id/mapContainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contacto -->
+        <TextView
+            android:id="@+id/tvContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📧 Contacto: correo@ejemplo.com"
+            android:paddingBottom="16dp" />
+
+        <!-- Participantes -->
+        <TextView
+            android:id="@+id/tvDetalleParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Participantes: 0"
+            android:textSize="16sp"
+            android:paddingBottom="8dp" />
+
+        <!-- ✅ NUEVO: Progress Bar para carga de participantes -->
+        <ProgressBar
+            android:id="@+id/progressBarParticipantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <!-- RecyclerView para lista de participantes (solo visible al creador) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp" />
+
+        <!-- Botón Unirme -->
+        <Button
+            android:id="@+id/btnUnirme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unirme"
+            app:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

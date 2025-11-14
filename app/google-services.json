@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "415264459776",
+    "project_id": "voluntime-e9667",
+    "storage_bucket": "voluntime-e9667.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415264459776:android:a63518dd2b6f7bd7dcdce5",
+        "android_client_info": {
+          "package_name": "com.example.voluntime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAugqjGoRNOZlHVOSvnrsruS_6PRcTJNDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

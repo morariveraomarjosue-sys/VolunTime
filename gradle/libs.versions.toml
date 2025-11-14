@@ -1,0 +1,38 @@
+[versions]
+# Versión de AGP estable
+agp = "8.9.1"
+
+# Testing
+junit = "4.13.2"
+extJunit = "1.1.5"
+espressoCore = "3.7.0"
+
+# AndroidX y Material
+appcompat = "1.7.1"
+material = "1.13.0"
+activity = "1.11.0"
+constraintlayout = "2.2.1"
+
+# Firebase BoM recomendado
+firebaseBom = "33.1.1"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.2" }
+
+[libraries]
+# Librerías Android (mantener igual)
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+activity = { module = "androidx.activity:activity", version.ref = "activity" }  # Quitar -ktx
+
+# Firebase (CAMBIAR: quitar -ktx)
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }  # ← Sin -ktx
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }  # ← Sin -ktx
+
+# Testing (mantener igual)
+junit = { module = "junit:junit", version.ref = "junit" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "extJunit" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
